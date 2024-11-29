@@ -45,7 +45,6 @@ sofiarecreio/
         <img align="center" alt="postgresql" src = "img/postgresql-original-wordmark.svg" height = 40px width = 40p/>
         <img align="center" alt="python" src = "img/python-original.svg" height = 40px width = 40p/>
         <img align="center" alt="typescript" src = "img/typescript-original.svg" height = 40px width = 40p/>
-        <img align="center" alt="wordpress" src = "img/pnegg (1).png" height = 40px width = 40p/>
 </div>
 
 <br>
