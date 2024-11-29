@@ -3,13 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana;
   }
   
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(to bottom, #f7f7f7, #dfe6e9);
     padding: 0;
     margin: 0;
   }
@@ -23,7 +22,8 @@
     color: white;
     padding: 2rem 0;
     position: relative;
-    flex-direction: row; /* Alinha os itens na horizontal */
+    flex-direction: row; 
+    height: 300px;
   }
   
   .profile-pic {
@@ -39,6 +39,86 @@
     flex-direction: column; /* Alinha os itens verticalmente */
     justify-content: center;
   }
+
+  /* Estilos gerais para o botão */
+.theme-button {
+  top: 20px;
+  right: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: absolute;
+  justify-self: flex-end;
+  border-bottom: none;
+}
+
+/* Hover no botão */
+.theme-button:hover {
+  background-color: #7f8c8d;
+  transform: scale(1.1);
+}
+
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.dark-theme {
+  background-color: #2c3e50;
+  color: #f4f4f4;
+
+  .about-section, .contact-section, .projects-section, .skills-section {
+    background-color: rgb(30, 37, 46);
+  }
+
+  .about-section h2, .projects-section h2, .contact-section h2, .skills-section h2, .about-section p, .projects-section p, .contact-section p, .skills-section p, .about-section h3, .projects-section h3, .contact-section h3, .skill-card a {
+    color: #f4f4f4;
+  }
+
+  .skill-card, .project-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(7, 7, 7, 0.637);
+    opacity: 1;
+  }
+
+  .project-card, .skill-card {
+    background-color: #414b5e;
+  }
+
+  .contact-info div a, .contact-info div p {
+    color: #f4f4f4;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    color: #858585;
+    font-size: 3rem;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+  }
+  
+  .social-icons a[href*="github"]:hover {
+    color: #666; 
+    transform: scale(1.2);
+  }
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
   
   /* Responsividade */
   @media (max-width: 768px) {
@@ -77,7 +157,7 @@
   }
   
   .nav-links a:hover {
-    color: #18bc9c;
+    color: #72a8c7;
   }
   
   /* Main content */
@@ -160,7 +240,7 @@
   .social-icons a {
     margin: 0 10px;
     color: #333;
-    font-size: 2.5rem;
+    font-size: 3rem;
     transition: transform 0.3s ease, color 0.3s;
     text-decoration: none;
   }
@@ -218,6 +298,17 @@
 .skill-card p {
   color: #7f8c8d;
   font-size: 1rem;
+}
+
+.skills-section a {
+  color: #2c3e50; /* Cor inicial */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease, transform 0.2s ease; /* Animação suave */
+}
+
+.skills-section a:hover {
+  color: #7f8c8d; /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Leve aumento no tamanho */
 }
 
 /* Responsividade */
