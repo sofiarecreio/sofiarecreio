@@ -1,15 +1,14 @@
-<div style="display: center">
+<center>
     <h1>Hello! I'm Sofia Recreio 🙋🏼‍♀️</h1>
-</div>
+</center>
 
-<div style="display: center">
+<center>
     <h3>A dedicated web developer</h3>
-</div>
+</center>
 
 - 🦾  I’m currently learning <b>Java and AI</b>
 
-- 👨‍💻 All of my projects are available at https://sofiarecreio.github.io/
-sofiarecreio/
+- 👨‍💻 All of my projects are available at https://sofiarecreio.github.io/sofiarecreio/
 
 - 📫 How to reach me sofia.recreio2@gmail.com
 
