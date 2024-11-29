@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @sofiarecreio
 - 👀 I’m interested in Back-End Development and AI
 - 🌱 I’m currently learning AI and Java
-- 💞️ I’m looking to collaborate on 
+- 💞️ I’m looking to collaborate on the development of scalable back-end solutions, focusing on REST APIs and process optimization. I want to learn AI and Machine Learning and am dedicated to continuous learning and improvement.
 - 📫 How to reach me: sofia.recreio2@gmail.com or (21) 98929-4200
 
 <!---
