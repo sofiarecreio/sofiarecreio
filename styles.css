@@ -1,0 +1,548 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    position: relative;
+    flex-direction: row; 
+    height: 300px;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 2rem; /* Espaço entre a imagem e o conteúdo */
+    border: 5px solid white;
+  }
+  
+  header .content {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    justify-content: center;
+  }
+
+  /* Estilos gerais para o botão */
+.theme-button {
+  top: 20px;
+  right: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: absolute;
+  justify-self: flex-end;
+  border-bottom: none;
+}
+
+/* Hover no botão */
+.theme-button:hover {
+  background-color: #7f8c8d;
+  transform: scale(1.1);
+}
+
+body.light-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+body.dark-theme {
+  background-color: #2c3e50;
+  color: #f4f4f4;
+
+  .about-section, .contact-section, .projects-section, .skills-section {
+    background-color: rgb(30, 37, 46);
+  }
+
+  .about-section h2, .projects-section h2, .contact-section h2, .skills-section h2, .about-section p, .projects-section p, .contact-section p, .skills-section p, .about-section h3, .projects-section h3, .contact-section h3, .skill-card a {
+    color: #f4f4f4;
+  }
+
+  .skill-card, .project-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(7, 7, 7, 0.637);
+    opacity: 1;
+  }
+
+  .project-card, .skill-card {
+    background-color: #414b5e;
+  }
+
+  .contact-info div a, .contact-info div p {
+    color: #f4f4f4;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+    color: #858585;
+    font-size: 3rem;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+  }
+  
+  .social-icons a[href*="github"]:hover {
+    color: #666; 
+    transform: scale(1.2);
+  }
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; /* Para telas menores, coloca a imagem em cima */
+      text-align: center;
+    }
+  
+    .profile-pic {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Navigation */
+  nav {
+    background: #34495e;
+    padding: 1rem 0;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #72a8c7;
+  }
+  
+  /* Main content */
+  main {
+    padding: 2rem;
+  }
+  
+  .about-section, .projects-section, .contact-section {
+    margin: 2rem 0;
+  }
+  
+  .about-section h2, .projects-section h2, .contact-section h2, .skills-section h2  {
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .projects-section {
+    padding: 20px;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #666;
+}
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .project-card {
+    background: #f7f7f7;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-card a {
+    text-decoration: none;
+    color: #18bc9c;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .project-card a:hover {
+    color: #2c3e50;
+  }
+  
+  /* Social icons */
+  .social-icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 3rem;
+    transition: transform 0.3s ease, color 0.3s;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+  }
+  
+  .social-icons a[href*="github"] {
+    color: #333;
+  }
+  
+  .social-icons a[href*="github"]:hover {
+    color: #666; 
+    transform: scale(1.2);
+  }
+
+  /* Skill Card */
+.skills-section {
+  padding: 2rem;
+  background: white;
+  text-align: center;
+  border-radius: 1.5rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-card {
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.skill-card p {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.skills-section a {
+  color: #2c3e50; /* Cor inicial */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  transition: color 0.3s ease, transform 0.2s ease; /* Animação suave */
+}
+
+.skills-section a:hover {
+  color: #7f8c8d; /* Cor ao passar o mouse */
+  transform: scale(1.1); /* Leve aumento no tamanho */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skills-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-card {
+      padding: 1rem;
+  }
+
+  .skills-section h2 {
+      font-size: 1.5rem;
+  }
+}
+
+/* Seção de Contato */
+.contact-section {
+  padding: 3rem 2rem;
+  background-color: white;
+  color: #2c3e50;
+  font-family: 'Arial', sans-serif;
+  border-radius: 1.5rem;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-section .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-section .contact-info div {
+  text-align: center;
+}
+
+.contact-section .contact-info div i {
+  font-size: 2.5rem;
+  color: #6f85b6bb;
+  margin-bottom: 1rem;
+}
+
+.contact-section .contact-info div p {
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.contact-section .contact-info div a {
+  display: block;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.contact-section .contact-info div a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para o formulário de contato */
+.contact-section {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact-section h2 {
+      font-size: 2rem;
+  }
+
+  .contact-section .contact-info {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+.about-section {
+  padding: 3rem 2rem;
+  background: white;
+  color: #2c3e50;
+  font-family: 'Arial', sans-serif;
+  border-radius: 1.5rem;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-section .highlight {
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.about-section .experience-title {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-section .experience-text {
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-section .academic-experience {
+  margin-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #34495e;
+}
+
+.about-section .experience-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.about-section .experience-list li {
+  margin-bottom: 0.8rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-section h2 {
+      font-size: 2rem;
+  }
+
+  .about-section p {
+      font-size: 1rem;
+  }
+
+  .about-section .experience-title {
+      font-size: 1.5rem;
+  }
+}
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #34495e;
+    color: white;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    header {
+      padding: 1rem 0;
+    }
+  
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0;
+    }
+  
+    .projects-container {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 0.9rem;
+    }
+  
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .nav-links a {
+      font-size: 0.9rem;
+    }
+  
+    .projects-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .project-card {
+      padding: 0.8rem;
+    }
+  
+    footer {
+      font-size: 0.8rem;
+    }
+  }
+  
+  body.light-theme .about-section {
+  background-color: #bbcfdf;
+}
+
+body.light-theme .skills-section {
+  background-color: #bbcfdf;
+}
+
+body.light-theme .projects-section {
+  background-color: #bbcfdf;
+}
+
+body.light-theme .contact-section {
+  background-color: #bbcfdf;
+}
+
+/* Cards com fundo diferente do da seção */
+body.light-theme .skill-card,
+body.light-theme .project-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
