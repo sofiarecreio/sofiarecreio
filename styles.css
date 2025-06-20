@@ -524,3 +524,25 @@ body {
     }
   }
   
+  body.light-theme .about-section {
+  background-color: #bbcfdf;
+}
+
+body.light-theme .skills-section {
+  background-color: #bbcfdf;
+}
+
+body.light-theme .projects-section {
+  background-color: #bbcfdf;
+}
+
+body.light-theme .contact-section {
+  background-color: #bbcfdf;
+}
+
+/* Cards com fundo diferente do da seção */
+body.light-theme .skill-card,
+body.light-theme .project-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
