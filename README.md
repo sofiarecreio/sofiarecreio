@@ -8,7 +8,7 @@
 
 - 🦾  I’m currently learning <b>Java and AI</b>
 
-- 👨‍💻 All of my projects are available at https://sofiarecreio.github.io/sofiarecreio/
+- 👨‍💻 You can learn more about me at https://sofiarecreio.github.io/sofiarecreio/
 
 - 📫 How to reach me sofia.recreio2@gmail.com
 
